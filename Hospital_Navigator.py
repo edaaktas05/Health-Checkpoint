@@ -1,4 +1,5 @@
 def get_department(complaint):
+    
     complaint = complaint.lower()
     
     if "chest pain" in complaint or "heart" in complaint:
