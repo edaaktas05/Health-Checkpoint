@@ -32,11 +32,32 @@ def get_department(complaint):
     tokens = preprocess_text(complaint)
     
     rules = {
-        "Cardiology": ["chest", "pain", "heart", "palpit"],
-        "General Medicine": ["cough", "fever", "fatigu"],
-        "Dermatology": ["rash", "itch", "skin"],
-        "Orthopedics": ["broken", "bone", "sprain", "joint", "pain"],
-        "Gastroenterology": ["stomach", "pain", "digest", "abdomin"]
+        "Anesthesiology": ["pain", "surgery", "anesthesia"],
+        "Cardiology": ["chest", "pain", "heart", "palpitation", "shortness of breath", "fatigue", "dizziness", "swelling"],
+        "Dermatology": ["rash", "itch", "skin", "acne", "eczema", "psoriasis", "mole", "lesion"],
+        "Emergency Medicine": ["severe", "pain", "trauma", "sudden", "difficulty breathing", "chest pain"],
+        "Endocrinology": ["fatigue", "weight", "urination", "thirst", "hair loss", "temperature"],
+        "Family Medicine": ["general", "routine", "preventive", "non-specific"],
+        "Gastroenterology": ["stomach", "pain", "digest", "abdominal", "bloat", "diarrhea", "constipation", "heartburn", "nausea", "vomiting", "stool"],
+        "Geriatrics": ["memory", "mobility", "incontinence", "frailty"],
+        "Hematology": ["bruising", "bleeding", "fatigue", "pallor", "infections", "lymph nodes"],
+        "Infectious Disease": ["fever", "chills", "sweats", "cough", "weight loss", "rash", "travel"],
+        "Internal Medicine": ["chronic", "hypertension", "diabetes", "fatigue"],
+        "Medical Genetics": ["genetic", "birth defect", "developmental", "features"],
+        "Nephrology": ["swelling", "urine", "blood pressure", "fatigue"],
+        "Neurology": ["headache", "seizure", "numbness", "tingling", "weakness", "dizziness", "balance", "memory"],
+        "Obstetrics and Gynecology (OB/GYN)": ["period", "pelvic", "pregnancy", "menopause"],
+        "Oncology": ["weight loss", "fatigue", "lump", "skin", "pain"],
+        "Ophthalmology": ["vision", "eye", "pain", "redness", "floaters", "double vision", "loss"],
+        "Orthopedics": ["joint", "pain", "back", "fracture", "sprain", "arthritis", "muscle", "motion"],
+        "Otolaryngology (ENT)": ["ear", "hearing", "sinus", "throat", "dizziness", "snoring", "voice"],
+        "Pediatrics": ["child", "fever", "cough", "rash", "growth", "developmental"],
+        "Physical Medicine and Rehabilitation (PM&R)": ["chronic pain", "mobility", "recovery", "injury", "muscle"],
+        "Psychiatry": ["depression", "anxiety", "mood", "sleep", "hallucinations", "suicidal"],
+        "Pulmonology": ["cough", "shortness of breath", "wheezing", "chest pain", "respiratory"],
+        "Rheumatology": ["joint pain", "swelling", "stiffness", "fatigue", "autoimmune", "muscle"],
+        "Surgery": ["surgical", "appendicitis", "hernia", "trauma", "cancer"],
+        "Urology": ["urinary", "blood", "pelvic pain", "erectile", "incontinence"]
     }
     
     for department, keywords in rules.items():
